@@ -1,0 +1,567 @@
+<html>
+	<head>
+		<title>Interstate Medical</title>
+        <script type="text/javascript">
+			function dropdownImage1()
+			{
+				var firstDropdown = document.getElementById("dropdown1").value;
+				var firstDropImage = document.getElementById("dropImage0");
+				var elementNo = firstDropdown;
+				
+				if (firstDropdown == "ACMI/CIRCON")
+				{
+				
+
+					firstDropImage.src= document.images[elementNo].src;
+					document.images[0].src=document.images[elementNo].src;
+				}
+				else
+				if (firstDropdown == "WOLF/DYONICS")
+				{
+					
+
+					firstDropImage.src= document.images[elementNo].src;
+					document.images[0].src=document.images[elementNo].src;
+				}
+				else
+				if (firstDropdown == "WOLF/LONG")
+				{
+					
+					firstDropImage.src= document.images[elementNo].src;
+					document.images[0].src=document.images[elementNo].src;
+				}
+				if (firstDropdown == "Acmi/Olympus")
+				{
+					
+					firstDropImage.src= document.images[elementNo].src;
+					document.images[0].src=document.images[elementNo].src;
+				}
+				if (firstDropdown == "Storz")
+				{
+					
+					firstDropImage.src= document.images[elementNo].src;
+					document.images[0].src=document.images[elementNo].src;
+				}
+				if (firstDropdown == "Pilling")
+				{
+					
+					firstDropImage.src= document.images[elementNo].src;
+					document.images[0].src=document.images[elementNo].src;
+				}
+				if (firstDropdown == "Universal")
+				{
+					
+					firstDropImage.src= document.images[elementNo].src;
+					document.images[0].src=document.images[elementNo].src;
+				}
+			}
+			
+			function getProximalConnector()
+			{
+				var ProximalConnectors = new Array();
+					ProximalConnectors["0"]= "Proximal Connectors = Select";
+					ProximalConnectors["ACMI/CIRCON"]= "Proximal Connectors = ACMI/CIRCON";
+					ProximalConnectors["WOLF/DYONICS"]= "Proximal Connectors = WOLF/DYONICS";
+					ProximalConnectors["WOLF/LONG"]= "Proximal Connectors = WOLF/LONG";
+					ProximalConnectors["Acmi/Olympus"]= "Proximal Connectors = Acmi/Olympus";
+					ProximalConnectors["Storz"]= "Proximal Connectors = Storz";
+					ProximalConnectors["Pilling"]= "Proximal Connectors = Pilling";
+					ProximalConnectors["Universal"]= "Proximal Connectors = Universal";
+					
+				var ProximalConnectorSelected = "select";
+				
+				for(var i=0; i<ProximalConnectors.length;i++;)
+				{
+					if(ProximalConnectors[i].value==document.forms["order"].dropdown1.value)
+					{
+						ProximalConnectorSelected=ProximalConnectors.value;
+						break;
+					}
+				}
+				
+				return string(ProximalConnectorSelected)
+			}
+			
+			function getDistalConnector()
+			{
+				var DistalConnectors = new Array();
+					DistalConnectors["Select"]= "Distal Connectors = ";
+					DistalConnectors["ACMI/CIRCON SNAP ON"]= "Distal Connectors = ACMI/CIRCON SNAP ON";
+					DistalConnectors["ACMI/CIRCON CLIP ON"]= "Distal Connectors = ACMI/CIRCON CLIP ON";
+					DistalConnectors["WOLF SNAP ON"]= "Distal Connectors = WOLF SNAP ON";
+					DistalConnectors["WOLF CLIP ON"]= "Distal Connectors = WOLF CLIP ON";
+					DistalConnectors["Olympus"]= "Distal Connectors = Olympus";
+					DistalConnectors["Storz"]= "Distal Connectors = Storz";
+					DistalConnectors["Pilling"]= "Distal Connectors = Pilling";
+					DistalConnectors["Universal"]= "Distal Connectors = Universal";
+					
+					
+				var DistalConnectorSelected = "select";
+				
+				for(var i=0; i<DistalConnectors.length;i++;)
+				{
+					if(DistalConnectors[i].value==document.forms["order"].dropdown2.value)
+					{
+						DistalConnectorSelected=DistalConnectors.value;
+						break;
+					}
+				}
+				
+				return string(DistalConnectorSelected);
+			}
+			
+			function getFiberOpticBundleSize()
+			{
+				var FiberOpticBundleSize = new Array();
+					FiberOpticBundleSize["Select"]= "Fiber Optic Bundle Size = Select";
+					FiberOpticBundleSize["2.2mm"]= "Fiber Optic Bundle Size = 2.2mm";
+					FiberOpticBundleSize["3.0mm"]= "Fiber Optic Bundle Size = 3.0mm";
+					FiberOpticBundleSize["3.8mm"]= "Fiber Optic Bundle Size = 3.8mm";
+					FiberOpticBundleSize["4.8mm"]= "Fiber Optic Bundle Size = 4.8mm";
+					FiberOpticBundleSize["5.0mm"]= "Fiber Optic Bundle Size = 5.0mm";
+						
+					
+					var FiberOpticBundleSizeSelected = "select";
+				
+				for(var i=0; i<FiberOpticBundleSize.length;i++;)
+				{
+					if(FiberOpticBundleSize[i].value==document.forms["order"].dropdown3.value)
+					{
+						FiberOpticBundleSizeSelected=FiberOpticBundleSize.value;
+						break;
+					}
+				}
+				
+				return string(FiberOpticBundleSizeSelected);
+			}
+			
+			
+			function getSelectFiberOpticCableLength()
+			{
+				var FiberOpticCableLength = new Array();
+					FiberOpticCableLength[];
+					FiberOpticCableLength[];
+					FiberOpticCableLength[];
+					FiberOpticCableLength[];
+					FiberOpticCableLength[]; //custom
+					   
+						var FiberOpticCableLengthSelected = "select"
+				
+				for(var i=0; i<FiberOpticCableLength.length;i++;)
+				{
+					if(i == 4)
+						{
+						
+							FiberOpticCableLength.value = document.forms["order"].customLength.value;
+							break;
+						}
+					else
+					if(FiberOpticCableLength[i].value == document.forms["order"].dropdown4.value)
+					{
+						FiberOpticCableLengthSelected = FiberOpticLength.value;
+						break;
+					}
+				}
+				
+				return string(FiberOpticCableLengthSelected);
+			}
+			
+			function getInstrumentConnectorAngle()
+			{
+				var InstrumentConnectorAngle = new Array();
+					InstrumentConnectorAngle["Select"]= "Instrument Connector Angle = select";
+					InstrumentConnectorAngle["Standard"]= "Instrument Connector Angle = standard 180";
+					InstrumentConnectorAngle["45 Degrees"]= "Instrument Connector Angle = 45 Degrees";
+					
+						var InstrumentConnectorAngleSelected = "select"
+				
+				for(var i=0; i<InstrumentConnectorAngle.length;i++;)
+				{
+					if(InstrumentConnectorAngle[i].value == document.forms["order"].dropdown5.value)
+					{
+						InstrumentConnectorAngleSelected = InstrumentConnectorAngle.value;
+						break;
+					}
+				}
+				
+				return string(InstrumentConnectorAngleSelected);
+			}
+			
+			function getSheathingType()
+			{
+				var SheathingType = new Array();
+					SheathingType["Select"] = " Sheathing Type = Select";
+					SheathingType["Non-Reinforced"] = " SheathingType = Non-Reinforced";
+					SheathingType["Reinforced Ends"] = " SheathingType = 6inch Reinforced";
+					SheathingType["Fully-Reinforced"] = " SheathingType =Fully-Reinforced ";
+					
+						var SheathingTypeSelected = "select"
+				
+				for(var i=0; i<SheathingType.length;i++;)
+				{
+					if(SheathingType[i].value==document.forms["order"].dropdown6.value)
+					{
+						SheathingTypeSelected = SheathingType.value;
+						break;
+					}
+				}
+				
+				return string(FiberOpticBundleSizeSelected);
+			}
+			
+			function getSheathingColor()
+			{
+				var SheathingColor = new Array();
+					SheathingColor["Select"]= "SheathingColor = Select ";
+					SheathingColor["Clear"]= "SheathingColor = Clear";
+					SheathingColor["White"]= "SheathingColor = White";
+					SheathingColor["Red"]= "SheathingColor = Red";
+					SheathingColor["Gray"]= "SheathingColor = Gray";
+					SheathingColor["Blue"]= "SheathingColor = Blue";
+					SheathingColor["Pink"]= "SheathingColor = Pink";
+					SheathingColor["Purple"]= "SheathingColor = Purple";
+					SheathingColor["Yellow"]= "SheathingColor = Yellow";
+					SheathingColor["Green"]= "SheathingColor = Green";
+					SheathingColor["Black"]= "SheathingColor = Black";
+					
+						var SheathingColorSelected = "select"
+				
+				for(var i=0; i<SheathingColor.length;i++;)
+				{
+					if(SheathingColor[i].value==document.forms["order"].dropdown7.value)
+					{
+						SheathingColorSelected=SheathingColor.value;
+						break;
+					}
+				}
+				
+				return string(SheathingColorSelected);
+			}
+			
+			
+			function order()
+			{
+				var orderCode="code";
+				orderCode= getProximalConnector() + " " + getDistalConnector() + " " + getFiberOpticBundleSize() + " " + getSelectFiberOpticCableLength()+
+				" " + getInstrumentConnectorAngle()+ " " + getSheathingType() + " " + getSheathingColor();
+				total.value = orderCode;
+			}
+			
+		</script>
+		
+		<style>
+			
+			
+			#link1
+			{
+				background-color: #4CAF50;
+				color: white;
+				padding: 16px 25px;
+				font-size: 16px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+			}
+			
+			#link3
+			{
+				background-color: #4CAF50;
+				color: white;
+				padding: 16px 25px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+			}
+			
+			.dropbtn
+			{
+				background-color: #4CAF50;
+				color: white;
+				padding: 16px;
+				font-size: 16px;
+				border: none;
+				cursor: pointer;
+			}
+
+			.dropdown
+			{
+				position: relative;
+				display: inline-block;
+			}
+
+			.dropdown-content 
+			{
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 100px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+
+			.dropdown-content a 
+			{
+				color: black;
+			    padding: 12px 16px;
+				text-decoration: none;
+			    display: block;
+			}
+
+			.dropdown-content a:hover {background-color: #f1f1f1}
+
+			.dropdown:hover .dropdown-content 
+			{
+				display: block;
+			}
+
+			.dropdown:hover .dropbtn 
+			{
+				background-color: #3e8e41;
+			}
+		</style>
+		
+		
+		<header style=" background-color: gray;">
+			<h1 style="text-align: center;">Interstate Medical Corp</h1>
+			
+			<a href="Interstate_Medical_Corp_Home.html" id="link1">Home</a>
+			<div class="dropdown">
+				<button class="dropbtn">Products</button>
+				<div class="dropdown-content">
+					<a href="Interstate_Medical_Website.html">Interstate Medical Website</a>
+					<a href="Forceps.html">Forceps</a>
+					<a href="#">coming soon</a>
+				</div>
+			</div>
+				<a href="Interstate_Medical_Corp_Home.html" id="link3">Contacts</a>
+		</header>
+		
+		
+	</head>
+
+	<body>
+		<form name="order" action="mailto:jefferson.f.allen@gmail.com?Subject=order" method="post" enctype="text/plain" >
+			<h3>Cable Order Guide</h3>
+			
+			<table border="1" style="margin-top: 10px; margin-bottom: 10px;">
+				<tr>
+					<td><p>Step 1</p></td>
+					<td><p>Step 2</p></td>
+					<td><p>Step 3</p></td>
+					<td><p>Step 4</p></td>
+					<td><p>Step 5</p></td>
+					<td><p>Step 6</p></td>
+					<td><p>Step 7</p></td>
+				</tr>
+				<tr>
+					<td><p>Select Proximal Connector</p></td>
+					<td><p>Select Distal Connector</p></td>
+					<td><p>Select Fiber Optic Bundle Size</p></td>
+					<td><p>Select Fiber Optic Cable Length</p></td>
+					<td><p>Select Instrument Connector Angle</p></td>
+					<td><p>Select Sheathing Type</p></td>
+					<td><p>Select Sheathing Color</p></td>
+				</tr>
+			</table>
+		
+			<div id="step1" style=" border: solid black 1px; margin-bottom:10px;">
+				<div style="border-bottom:  solid black 1px; padding-bottom: 10px; padding-top: 10px; background-color: pink;">
+					<label>Step 1: Select Proximal Connector</label>
+					<select id="dropdown1" name="dropdown1" style="width: 175px;" onchange="dropdownImage1()" onchange="order()">
+						<option value="Select ">Select</option>
+						<option value="ACMI/CIRCON ">ACMI/CIRCON</option>
+						<option value="WOLF/DYONICS ">WOLF/DYONICS</option>
+						<option value="WOLF/LONG ">WOLF/LONG</option>
+						<option value="Acmi/Olympus ">Acmi/Olympus</option>
+						<option value="Storz ">Storz</option>
+						<option value="Pilling ">Pilling</option>
+						<option value="Universal ">Universal</option>
+					</select>
+				</div>
+
+				<table>
+					<tr>
+						<td><img id="dropImage0" src="images/image1.jpg" alt="image1" style=" width: 150px; "><p>Your Selection</p></td>
+						<td><img id="dropImage1" src="images/CableOrderStep1/Acmi_Circon_step1.jpg" alt="image1" ><p>ACMI/CIRCON</p></td>
+						<td><img id="dropImage2" src="images/CableOrderStep1/Wolf_Dyonics_step1.jpg" alt="image2"  ><p>WOLF/DYONICS</p></td>
+						<td><img id="dropImage3" src="images/CableOrderStep1/Wolf_Long_step1.jpg" alt="image3" ><p>WOLF/LONG</p></td>
+						<td><img id="dropImage4" src="images/CableOrderStep1/Acmi_Olympus_step1.jpg" alt="image3" ><p>Acmi/Olympus</p></td>
+						<td><img id="dropImage5" src="images/CableOrderStep1/Storz_step1.jpg" alt="image3" ><p>Storz</p></td>
+						<td><img id="dropImage6" src="images/CableOrderStep1/Pilling_step1.jpg" alt="image3" ><p>Pilling</p></td>
+						<td><img id="dropImage7" src="images/CableOrderStep1/Universal_step1.jpg" alt="image3"  ><p>Universal</p></td>
+					</tr>
+				</table>	
+			</div>
+			
+			
+			<div id="step2" style=" border: solid black 1px; margin-bottom:10px;">
+				<header style="border-bottom:  solid black 1px; padding-bottom: 10px; padding-top: 10px; background-color: pink;">
+				<label>Step 2: Select Distal Connector</label>
+				<select id="dropdown2" name="dropdown2" style="width: 175px;" onchange="dropdownImage2()">
+					<option value="Select">Select</option>
+					<option value="ACMI/CIRCON SNAP ON ">ACMI/CIRCON SNAP ON</option>
+					<option value="ACMI/CIRCON CLIP ON ">ACMI/CIRCON CLIP ON</option>
+					<option value="WOLF SNAP ON ">WOLF SNAP ON</option>
+					<option value="WOLF CLIP ON ">WOLF CLIP ON</option>
+					<option value="Olympus ">Olympus</option>
+					<option value="Storz ">Storz</option>
+					<option value="Pilling ">Pilling</option>
+					<option value="Universal ">Universal</option>
+				</select>
+				</header>
+
+				<table>
+					<tr>
+						<td><img id="dropImage0" src="images/image1.jpg" alt="image1" style=" width: 150px; "><p>Your Selection</p></td>
+						<td><img id="dropImage1" src="images/CableOrderStep2/Acmi_Clip_step2.jpg" alt="image1" ><p>ACMI/CIRCON SNAP ON</p></td>
+						<td><img id="dropImage1" src="images/CableOrderStep2/Acmi_Snap_step2.jpg" alt="image1" ><p>ACMI/CIRCON CLIP ON</p></td>
+						<td><img id="dropImage2" src="images/CableOrderStep2/Wolf_Snap_step2.jpg" alt="image2"  ><p>WOLF SNAP ON</p></td>
+						<td><img id="dropImage3" src="images/CableOrderStep2/Wolf_Clip_step2.jpg" alt="image3" ><p>WOLF CLIP ON</p></td>
+						<td><img id="dropImage4" src="images/CableOrderStep2/Olympus_step2.jpg" alt="image3" ><p>Olympus</p></td>
+						<td><img id="dropImage5" src="images/CableOrderStep2/Storz_step2.jpg" alt="image3" ><p>Storz</p></td>
+						<td><img id="dropImage6" src="images/CableOrderStep2/Pilling_step2.jpg" alt="image3" ><p>Pilling</p></td>
+						<td><img id="dropImage7" src="images/CableOrderStep2/Universal_step2.jpg" alt="image3"  ><p>Universal</p></td>
+					</tr>
+				</table>
+
+				
+			</div>
+			
+			<div id="step3" style=" border: solid black 1px; margin-bottom:10px;">
+				<div style="border-bottom:  solid black 1px; padding-bottom: 10px; padding-top: 10px; background-color: pink;">
+					<label>Step 3: Fiber Optic Bundle Size </label>
+					<select id="dropdown3" name="dropdown3" style="width: 175px;" onchange="dropdownImage1()">
+						<option value="Select ">Select</option>
+						<option value="2.2mm ">2.2mm</option>
+						<option value="3.0mm ">3.0mm</option>
+						<option value="3.8mm ">3.8mm</option>
+						<option value="4.8mm ">4.8mm</option>
+						<option value="5.0mm ">5.0mm</option>
+					</select>
+				</div>
+
+				<table>
+					<tr>
+						<td><img id="dropImage0" src="images/image1.jpg" alt="image1" style=" width: 150px; "><p>Your Selection</p></td>
+						<td><img id="dropImage1" src="images/CableOrderStep3/2_2mm.jpg" alt="image1" ><p>2.2mm</p></td>
+						<td><img id="dropImage2" src="images/CableOrderStep3/3_0mm.jpg" alt="image2"  ><p>3.0mm</p></td>
+						<td><img id="dropImage3" src="images/CableOrderStep3/3_8mm.jpg" alt="image3" ><p>3.8mm</p></td>
+						<td><img id="dropImage4" src="images/CableOrderStep3/4_8mm.jpg" alt="image3" ><p>4.8mm</p></td>
+						<td><img id="dropImage5" src="images/CableOrderStep3/5_0mm.jpg" alt="image3" ><p>5.0mm</p></td>
+					</tr>
+				</table>
+
+				
+			</div>
+			
+			<div id="step4" style=" border: solid black 1px; margin-bottom:10px;">
+				<div style="border-bottom:  solid black 1px; padding-bottom: 10px; padding-top: 10px; background-color: pink;">
+					<label>Step 4: Fiber Optic Cable Length</label>
+					<select id="dropdown4" name="dropdown4" style="width: 175px;">
+						<option value="Select">Select</option>
+						<option value="6ft "><p>6 FT(180cm)</p></option>
+						<option value="8ft "><p>8 FT(250 cm)</p></option>
+						<option value="10ft "><p>10 FT(300 cm)</p></option>
+						<option value="custom "><p>Custom Lengths Available</p></option>
+					</select>
+				</div>
+
+				<table>
+					<tr>
+						<td><p>6 FT (180 cm)</p></td>
+						<td><p>8 FT (250 cm)</p></td>
+						<td><p>10 FT (300 cm)</p></td>
+						<td><p>Custom Lengths Available</p></td>
+						<td><input type="textarea" id="customLength" name="customLength"></td>
+					</tr>
+				</table>
+			</div>
+			
+			<div id="step5" style=" border: solid black 1px; margin-bottom:10px;">
+						<div style="border-bottom:  solid black 1px; padding-bottom: 10px; padding-top: 10px; background-color: pink;">
+							<label>Step 5: Instrument Connector Angle</label>
+							<select id="dropdown5" name="dropdown5" style="width: 175px;">
+								<option value="Select">Select</option>
+								<option value="Standard">Standard</option>
+								<option value="45 Degrees">45 Degrees</option>
+							</select>
+							</div>
+
+						<table>
+							<tr>
+								<td><img id="dropImage0" src="images/image1.jpg" alt="image1" style=" width: 150px; "><p>Your Selection</p></td>
+								<td><img id="dropImage1" src="images/CableOrderStep5/Standard_Step5.jpg" alt="image1" ><p>Standard</p></td>
+								<td><img id="dropImage2" src="images/CableOrderStep5/45_degree_Step5.jpg" alt="image2"  ><p>45 Degrees</p></td>
+							</tr>
+						</table>
+
+				
+			</div>
+	
+			<div id="step6" style=" border: solid black 1px; margin-bottom:10px;">
+				<div style="border-bottom:  solid black 1px; padding-bottom: 10px; padding-top: 10px; background-color: pink;">
+					<label>Step 6: Sheathing Type</label>
+					<select id="dropdown6" name="dropdown6" style="width: 175px;" >
+						<option value="Select">Select</option>
+						<option value="Non-Reinforced">Non-Reinforced</option>
+						<option value="Reinforced Ends">6" Reinforced Ends</option>
+						<option value="Fully-Reinforced">Fully-Reinforced</option>
+					</select>
+				</div>
+
+				<table>
+					<tr>
+						<td><p>Your Selection</p></td>
+						<td><p>Non-Reinforced</p></td>
+						<td><p>6" Reinforced Ends</p></td>
+						<td><p>Fully-Reinforced</p></td>
+					</tr>
+				</table>
+
+				
+			</div>
+			
+			<div id="step7" style=" border: solid black 1px; margin-bottom:10px;">
+				<div style="border-bottom:  solid black 1px; padding-bottom: 10px; padding-top: 10px; background-color: pink;">
+					<label>Step 7: Sheathing Color</label>
+					<select id="dropdown7" name="dropdown7" style="width: 175px;">
+						<option value="0">Select</option>
+						<option value="Clear"><p>Clear</p></option>
+						<option value="White"><p>White</p></option>
+						<option value="Red"><p>Red</p></option>
+						<option value="Gray"><p>Gray</p></option>
+						<option value="Blue"><p>Blue</p></option>
+						<option value="Pink"><p>Pink</p></option>
+						<option value="Purple"><p>Purple</p></option>
+						<option value="Yellow"><p>Yellow</p></option>
+						<option value="Green"><p>Green</p></option>
+						<option value="Black"><p>Black</p></option>
+					</select>
+				</div>
+
+				<table>
+					<tr>
+						<td><p>Your Selection</p></td>
+						<td><p>Clear</p></td>
+						<td><p>White</p></td>
+						<td><p>Red</p></td>
+						<td><p>Gray</p></td>
+						<td><p>Blue</p></td>
+						<td><p>Pink</p></td>
+						<td><p>Purple</p></td>
+						<td><p>Yellow</p></td>
+						<td><p>Green</p></td>
+						<td><p>Black</p></td>
+					</tr>
+				</table>
+
+				
+			</div>
+			
+			<input type="textarea" id="total" style="width:100px; height:50px; visibility:hidden;">
+			
+			<input type="submit" value="Send" style="background-color: rgb(0,0,255); color: rgb(255,255,255);">
+			<input type="reset" value="Reset" style="background-color: rgb(0,0,255); color: rgb(255,255,255);">
+		</form>
+	</body>
+</html>
